@@ -20,7 +20,8 @@ const GenderButtonSelect: React.FC<GenderButtonSelectProps> = ({
     return(
         <TouchableOpacity
             activeOpacity={0.5}
-            style={[styles.container, selected && selectedStyle]}
+            style={[styles.container]}
+            onPress={onPress}
         >
             {
                 gender === 'male' ?
@@ -28,7 +29,7 @@ const GenderButtonSelect: React.FC<GenderButtonSelectProps> = ({
                 :
                 <Ionicons name="female-outline" size={75} color={selected ? 'white' : '#8E8E98'} />
             }
-            <Text style={styles.label}>
+            <Text style={[styles.label, selected && selectedStyle]}>
                 { gender.toUpperCase() }
             </Text>
         </TouchableOpacity>
