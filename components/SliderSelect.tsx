@@ -34,7 +34,7 @@ const SliderSelect: React.FC<SliderSelectProps> = ({
             </Text>
 
             <Slider
-                style={{width: '90%', height: 400}}
+                style={{width: '100%', height: 400}}
                 thumbTintColor="#D83456"
                 step={1}
                 minimumValue={0}
